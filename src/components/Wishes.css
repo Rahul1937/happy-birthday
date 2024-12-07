@@ -1,0 +1,55 @@
+/* Container for Birthday Wishes */
+.birthday-wishes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Animated Birthday Title */
+.birthday-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem;
+    text-align: center;
+    color: #ffeb3d;
+    text-shadow: 0 0 30px #ffeb3d;
+    animation: bounceTitle 1s ease infinite alternate;
+}
+
+/* Paragraph with Playful Text Effects */
+.birthday-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    max-width: 700px;
+    overflow: auto;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    animation: textFadeIn 2s ease;
+    color: #ffe082;
+}
+
+/* Bounce Animation for Title */
+@keyframes bounceTitle {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Fade-In Text Animation */
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,100 @@
+/* Navigation bar styling */
+.navbar {
+  background-color: #1e1e2f;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation links */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #e0e0e0; /* Slightly lighter text for better contrast */
+  font-size: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+/* Hover effect for navigation links */
+.navbar a:hover {
+  background-color: #3700b3;
+  color: #ffe082;
+  transform: scale(1.05);
+}
+
+/* Locked navigation links */
+.locked a {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Active link styling */
+.navbar a.active {
+  background: #ffeb3d;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(255, 235, 59, 0.7);
+}
+
+/* Main content area */
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #121212, #1e1e2f);
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  margin: 20px;
+}
+
+/* Text content */
+.content p, .content h1 {
+  font-family: Arial, sans-serif;
+  color: #f0f0f0; /* Slightly lighter text for better readability */
+  text-align: center;
+}
+
+/* Button styling for navigation or content interactions */
+button {
+  background-color: #6200ea;
+  color: #fff;
+  padding: 15px 30px;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 10px rgba(98, 0, 234, 0.6);
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #3700b3;
+  transform: scale(1.05);
+}
+
+/* Button focus effect */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.7);
+}

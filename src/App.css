@@ -1,0 +1,79 @@
+:root {
+  /* Theme Variables */
+  --background-dark: #1c1c1e; /* Dark background for the app */
+  --header-bg: #2c2c34; /* Dark header background */
+  --primary-accent: #ff69b4; /* Vibrant pink for accents */
+  --secondary-accent: #ffcc00; /* Bright yellow for highlights */
+  --text-color: #ffffff; /* Main text color */
+  --text-secondary: #d1d1d6; /* Subdued text color */
+  --hover-color: #ff85c4; /* Hover effect for navigation */
+}
+
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: var(--background-dark); /* Dark background */
+  color: var(--text-color); /* Main text color */
+  min-height: 100vh; /* Ensure full-screen height */
+  margin: 0;
+}
+
+/* Header Styling */
+.header {
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation Links */
+.nav a {
+  margin: 10px;
+  text-decoration: none;
+  color: var(--primary-accent);
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+}
+
+/* Button Styling */
+button {
+  background-color: var(--primary-accent);
+  color: var(--text-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .nav a {
+    font-size: 1rem; /* Adjust navigation font size for smaller screens */
+  }
+
+  .header {
+    padding: 15px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}

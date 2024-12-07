@@ -1,0 +1,118 @@
+/* Full-page Happy Birthday container */
+.happy-birthday-container {
+    height: 80vh;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    margin: 10px auto;
+}
+
+/* Animated Birthday Cake Video */
+.birthday-cake-video {
+    width: 70%; /* Adjust for better fit on mobile */
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%; /* Slightly reduced for mobile friendliness */
+    box-shadow: 0 0 30px #6200ea80;
+    max-height: 70%; /* Prevents the video from overflowing on smaller screens */
+}
+
+/* Floating Balloons */
+.balloon {
+    position: absolute;
+    background: radial-gradient(circle, #ff5722, #ffeb3d);
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: floatBalloon 10s ease-in-out forwards;
+    width: 60px; /* Default size for balloons */
+    height: 80px;
+}
+
+/* Balloon Colors with Dark Theme Contrast */
+.balloon:nth-child(odd) {
+    background: radial-gradient(circle, #ff5252, #f06292);
+}
+
+.balloon:nth-child(even) {
+    background: radial-gradient(circle, #ffeb3d, #ff5722);
+}
+
+/* Add slight shadows to balloons */
+.balloon {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Keyframe for the floating balloons */
+@keyframes floatBalloon {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    70% {
+        transform: translateY(-500px) rotate(180deg);
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-1000px) rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .happy-birthday-container {
+        height: 75vh;
+        width: 95%;
+        margin: 5px auto;
+    }
+
+    .birthday-cake-video {
+        width: 90%;
+        max-height: 60%;
+        border-radius: 20%;
+    }
+
+    .balloon {
+        width: 40px; /* Smaller balloons for smaller screens */
+        height: 60px;
+        animation: floatBalloon 10s ease-in-out forwards;
+    }
+
+    @keyframes floatBalloon {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 1;
+        }
+        70% {
+            transform: translateY(-300px) rotate(180deg); /* Adjust for smaller screens */
+            opacity: 0.5;
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-700px) rotate(360deg);
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .happy-birthday-container {
+        height: 70vh;
+        width: 100%;
+    }
+
+    .birthday-cake-video {
+        width: 95%;
+        max-height: 50%;
+        border-radius: 15%;
+    }
+
+    .balloon {
+        width: 30px; /* Even smaller balloons for very small screens */
+        height: 50px;
+        animation: floatBalloon 10s ease-in-out forwards;
+    }
+}

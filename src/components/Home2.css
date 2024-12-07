@@ -1,0 +1,100 @@
+.home2-container {
+  width: 90%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Happy Birthday Text */
+.happy-birthday-text {
+  font-family: "Pacifico", cursive;
+  font-size: 5rem;
+  color: #ffd700;
+  text-shadow: 0 2px 8px rgba(255, 223, 0, 0.7);
+}
+
+/* Star Box Container */
+.star-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Individual Star */
+.star {
+  position: absolute;
+  background: radial-gradient(circle, #ffeb3d, #ffc107);
+  width: 5px;
+  height: 5px;
+  opacity: 0.8;
+  animation: floatStar 5s ease-in-out infinite;
+}
+
+/* Animating Floating Stars */
+@keyframes floatStar {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-50px) rotate(360deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-1000px) rotate(720deg);
+  }
+}
+
+/* Countdown Box Styling */
+.countdown-box {
+  background: #2e2e48;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  color: #fff;
+  max-width: 400px;
+  margin: auto;
+}
+
+.countdown-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffe082;
+}
+
+.countdown-timer {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffeb3d;
+}
+
+/* Prevent overlap by spacing out countdown and text */
+.happy-birthday-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+/* Pulse Animation for Countdown */
+@keyframes pulseCountdown {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
