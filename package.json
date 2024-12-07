@@ -2,6 +2,7 @@
   "name": "birthday-page",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Rahul1937.github.io/happy-birthday",
   "dependencies": {
     "cra-template": "1.2.0",
     "framer-motion": "^11.13.1",
