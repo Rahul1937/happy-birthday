@@ -34,10 +34,10 @@ const Gallery = () => {
 
   useEffect(() => {
     const images = importAllImages(
-      require.context("../../public/images", false, /\.(jpg|jpeg|png)$/)
+      require.context(`${process.env.PUBLIC_URL}/images`, false, /\.(jpg|jpeg|png)$/)
     );
     const videos = importAllVideos(
-      require.context("../../public/videos", false, /\.(mp4|webm)$/)
+      require.context(`${process.env.PUBLIC_URL}/videos`, false, /\.(mp4|webm)$/)
     );
 
     const allMedia = shuffleArray([...images, ...videos]);
