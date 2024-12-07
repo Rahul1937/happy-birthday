@@ -29,7 +29,7 @@ const HappyBirthday = () => {
   return (
     <div className="happy-birthday-container">
 
-      <audio src="/audio/music.mp3" autoPlay loop />
+      <audio src={`${process.env.PUBLIC_URL}/audio/music.mp3`} autoPlay loop />
 
       {/* Animated Birthday Cake Video */}
       <motion.video
