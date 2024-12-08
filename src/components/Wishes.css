@@ -1,5 +1,6 @@
 /* Container for Birthday Wishes */
 .birthday-wishes-container {
+    position: relative; /* Enable layering for the collage background */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,10 +8,46 @@
     color: #fff;
     font-family: Arial, sans-serif;
     padding: 20px;
+    overflow: hidden; /* Prevent overflow of background */
 }
 
-/* Animated Birthday Title */
+/* Collage Container */
+.collage-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive grid */
+    gap: 5px; /* Space between images */
+    z-index: 0; /* Below the text */
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 5s ease forwards; /* Fade in effect */
+}
+
+/* Individual Collage Images */
+.collage-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.3; /* Set desired opacity */
+    }
+}
+
+/* Text and Title Styles */
 .birthday-title {
+    z-index: 1; /* Above the collage */
     font-family: 'Pacifico', cursive;
     font-size: 4rem;
     text-align: center;
@@ -19,8 +56,8 @@
     animation: bounceTitle 1s ease infinite alternate;
 }
 
-/* Paragraph with Playful Text Effects */
 .birthday-text {
+    z-index: 1; /* Above the collage */
     font-size: 1.8rem;
     line-height: 1.8;
     max-width: 700px;

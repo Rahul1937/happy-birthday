@@ -1,4 +1,5 @@
 .home2-container {
+  height: 100vh;
   width: 90%;
   position: relative;
   display: flex;

@@ -1,7 +1,7 @@
 /* Full-page Happy Birthday container */
 .happy-birthday-container {
-    height: 80vh;
-    width: 90%;
+    height: 90vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,10 +15,20 @@
 .birthday-cake-video {
     width: 70%; /* Adjust for better fit on mobile */
     height: auto;
+    z-index: 2;
     object-fit: cover;
     border-radius: 50%; /* Slightly reduced for mobile friendliness */
     box-shadow: 0 0 30px #6200ea80;
     max-height: 70%; /* Prevents the video from overflowing on smaller screens */
+}
+
+/* Fading Images */
+.fading-image {
+    position: absolute;
+    border-radius: 10px;
+    z-index: 1; /* Place behind other elements */
+    pointer-events: none; /* Prevent user interaction */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Floating Balloons */
@@ -28,8 +38,6 @@
     opacity: 0.8;
     border-radius: 50%;
     animation: floatBalloon 10s ease-in-out forwards;
-    width: 60px; /* Default size for balloons */
-    height: 80px;
 }
 
 /* Balloon Colors with Dark Theme Contrast */
@@ -77,9 +85,7 @@
     }
 
     .balloon {
-        width: 40px; /* Smaller balloons for smaller screens */
-        height: 60px;
-        animation: floatBalloon 10s ease-in-out forwards;
+        animation: floatBalloon 5s ease-in-out forwards;
     }
 
     @keyframes floatBalloon {
@@ -111,8 +117,21 @@
     }
 
     .balloon {
-        width: 30px; /* Even smaller balloons for very small screens */
-        height: 50px;
-        animation: floatBalloon 10s ease-in-out forwards;
+        animation: floatBalloon 5s ease-in-out forwards;
+    }
+
+    @keyframes floatBalloon {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 1;
+        }
+        70% {
+            transform: translateY(-300px) rotate(180deg); /* Adjust for smaller screens */
+            opacity: 0.5;
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-700px) rotate(360deg);
+        }
     }
 }
