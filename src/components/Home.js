@@ -11,10 +11,12 @@ const Home = ({ onUnlock, onSecretAccess }) => {
     setError("");
   };
 
+  const correctAnswers = ["puchki", "puchku", "puchka"];
+
   const validateAnswer = () => {
-    if (answer.toLowerCase() === "rahul bhukar") {
+    if (correctAnswers.includes(answer.toLowerCase())) {
       onUnlock();
-    } else if (answer.toLowerCase() === "manku n puchku"){
+    } else if (answer.toLowerCase() === "mankunpuchku@1415secret"){
       onSecretAccess();
     } else {
       setError("Oops! That's not the correct answer. Try again!");
@@ -28,7 +30,7 @@ const Home = ({ onUnlock, onSecretAccess }) => {
       </div>
       {isQuestionVisible && (
         <div className="question-container">
-          <p className="question-text">What is Rahul's actual full name? (yes you know!)</p>
+          <p className="question-text">What is your Name!?😅</p>
           <input
             type="text"
             value={answer}

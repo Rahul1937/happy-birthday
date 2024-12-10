@@ -6,12 +6,12 @@ import "./Wishes.css";
 const importAllImages = (r) => {
   return r.keys().map((item) => ({
     type: "image",
-    src: `/images/${item.replace("./", "")}`,
+    src: `/wishesImages/${item.replace("./", "")}`,
   }));
 };
 
 const images = importAllImages(
-  require.context("../../public/images", false, /\.(jpg|jpeg|png)$/)
+  require.context("../../public/wishesImages", false, /\.(jpg|jpeg|png)$/)
 );
 
 const Wishes = () => {

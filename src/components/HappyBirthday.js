@@ -6,12 +6,12 @@ import "./HappyBirthday.css";
 const importAllImages = (r) => {
   return r.keys().map((item) => ({
     type: "image",
-    src: `/images/${item.replace("./", "")}`,
+    src: `/hbdImages/${item.replace("./", "")}`,
   }));
 };
 
 const images = importAllImages(
-  require.context("../../public/images", false, /\.(jpg|jpeg|png)$/)
+  require.context("../../public/hbdImages", false, /\.(jpg|jpeg|png)$/)
 );
 const getRandomSize = () => {
   const screenWidth = window.innerWidth;
