@@ -13,7 +13,7 @@
 
 /* Animated Birthday Cake Video */
 .birthday-cake-video {
-    width: 70%; /* Adjust for better fit on mobile */
+    width: 55%; /* Adjust for better fit on mobile */
     height: auto;
     z-index: 2;
     object-fit: cover;

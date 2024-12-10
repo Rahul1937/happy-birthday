@@ -33,8 +33,8 @@ const getRandomImageSize = () => {
     return Math.random() * 200 + 150; // Random size for images
   }
 }
-const getRandomOpacity = () => Math.random() * 0.6 + 0.4; // Random opacity between 0.3 and 0.8
-const getRandomImage = () => images[(Math.floor(Math.random() * 26) + 1)%images.length].src
+const getRandomOpacity = () => Math.random() * 0.6 + 0.4; // Random opacity between 0.6 and 1
+const getRandomImage = () => images[(Math.floor(Math.random() * 29) + 1)%images.length].src
 
 const HappyBirthday = () => {
   const [balloons, setBalloons] = useState([]);
