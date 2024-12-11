@@ -19,7 +19,7 @@ const Wishes = () => {
     <div className="birthday-wishes-container">
       {/* Collage Background */}
       <div className="collage-container">
-        {images.map((img, index) => (
+        {images.sort().map((img, index) => (
           <img key={index} src={img.src} alt={`Collage ${index}`} className="collage-image" />
         ))}
       </div>
